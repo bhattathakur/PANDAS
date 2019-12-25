@@ -29,4 +29,14 @@ frame=pd.DataFrame(data)
 #Index objects are immutable and can't be modified by the user
 #Unlike python sets, a pandas index can contain duplicate labels
 #obj.reindex()->rearrange the data according to the new index
-
+#reindex->create a new object with the data conformed to a new index 
+#ffill->Forward fill the values
+# With DataFrame, reindex can alter either the (row) index, columsn, or both. When passed only a sequence, it reindexes the rows in the result
+#Columns can be reindexed with the column keyword frame.reindex(columns=[])
+# Dropping one or more entries from an axis is easy if you already have an index array or list without those entries. As that can require a bit of 
+#mungling and set logic, the drop method will return a new object with indicated value or values deleted from an axis
+#drop can take a value or list of values
+#In dataframe, drop with the sequence of row labels(axis 0) will drop values from the rows
+#Values from the columns can be dropped by passign axis=1 or axis='columns'
+#Using the parameter inplace=True will modify the given series or dataframe so be careful
+#obj[...] works as indexing
